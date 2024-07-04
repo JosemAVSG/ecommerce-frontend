@@ -3,7 +3,7 @@ import Image from 'next/image'
 const card = ({ product }: { product: Products}) => {
   const { id, name, description, price, stock, imgUrl } = product
   return (
-    <div>
+    <div key={id}>
       <div>
           <Image src={imgUrl} alt={name} width={200} height={300} ></Image>
       </div>

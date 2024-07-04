@@ -1,4 +1,4 @@
-import card from "@/components/card";
+import Card from "@/components/Card";
 import { Products } from '@/interfaces/product.interface'
 
 const getProducts = async () => {
@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {products.map((product: Products) => (
-        card({ product })
+        Card({ product })
       ))}
     </main>
   );
