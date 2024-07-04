@@ -1,14 +1,17 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className='w-full flex  gap-5 bg-slate-100'>
-        <Link href='/dashboard'> Dashboard</Link>
-        <Link href='/products'> Products</Link>
-        <Link href='/cart'>Cart</Link>
-        <Link href='/profile'> Profile</Link>
-    </nav>
-  )
-}
+    <>
+      <header>
+        <nav className="w-full flex  gap-5 bg-slate-100 p-4">
+          <Link href="/dashboard"> Dashboard</Link>
+          <Link href="/productsDeteails"> Products</Link>
+          <Link href="/shopingCart">Cart</Link>
+        </nav>
+      </header>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
