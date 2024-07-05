@@ -1,16 +1,28 @@
 import Link from "next/link";
-
-const Navbar = () => {
+import styles from "@/styles/navbar.module.scss";
+const Navbar: React.FC = () => {
   return (
     <>
-      <header>
-        <nav className="w-full flex  gap-5 bg-slate-100 p-4">
+      <header className={styles.navbar}>
+        <div className={styles.logo}>
+            <h1>Ecommerce Logo</h1>
+        </div>
+
+        <nav className={styles.nav}>
           <Link href="/dashboard"> Dashboard</Link>
           <Link href="/productsDeteails"> Products</Link>
           <Link href="/shopingCart">Cart</Link>
           <Link href="/login">Login</Link>
           <Link href="/register">Register</Link>
         </nav>
+
+        <div className={styles.cartlogin}>
+          <Link href="/login">Login</Link>
+          <Link href="/register">Register</Link>
+          <div>
+            <h2>Cart</h2>
+          </div>
+        </div>
       </header>
     </>
   );
