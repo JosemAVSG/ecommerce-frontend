@@ -4,42 +4,48 @@
     "name": "Product 1",
     "description": "This is the description of product 1",
     "price": 10,
-    "image": "https://picsum.photos/200/300"
+    "image": "https://picsum.photos/200/300",
+    "stock": 10
   },
   {
     "id": 2,
     "name": "Product 2",
     "description": "This is the description of product 2",
     "price": 20,
-    "image": "https://picsum.photos/200/301"
+    "image": "https://picsum.photos/200/301",
+    "stock": 10
   },
   {
     "id": 3,
     "name": "Product 3",
     "description": "This is the description of product 3",
     "price": 30,
-    "image": "https://picsum.photos/200/302"
+    "image": "https://picsum.photos/200/302",
+    "stock": 10
   },
   {
     "id": 4,
     "name": "Product 4",
     "description": "This is the description of product 4",
     "price": 40,
-    "image": "https://picsum.photos/200/303"
+    "image": "https://picsum.photos/200/303",
+    "stock": 10
   },
   {
     "id": 5,
     "name": "Product 5",
     "description": "This is the description of product 5",
     "price": 50,
-    "image": "https://picsum.photos/200/304"
+    "image": "https://picsum.photos/200/304",
+    "stock": 10
   },
   {
     "id": 6,
     "name": "Product 6",
     "description": "This is the description of product 6",
     "price": 60,
-    "image": "https://picsum.photos/200/305"
+    "image": "https://picsum.photos/200/305",
+    "stock": 10
   }
 ]
 

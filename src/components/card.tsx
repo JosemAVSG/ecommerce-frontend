@@ -6,16 +6,17 @@ const Card= ({ product }: { product: Products}) => {
 
   return (
     <>
-    <div key={id}>
-      <div className={styles.card__img}>
-          <Image src={image} alt={name} width={200} height={300} ></Image> 
-     </div>
+    <div key={id} className={styles.card}>
 
-      <div className={styles.card__body}>
+      <div className={styles.card_img}>
+          <Image src={image} alt={name} width={200} height={300} ></Image> 
+      </div>
+
+      <div className={styles.card_body}>
         <p>{name}</p>
         <p>{description}</p>
-        <p>{price}</p>
-        <p>{stock}</p>
+        <p>${price}</p>
+        <p>Stock:{stock}</p>
       </div>
     </div>
   

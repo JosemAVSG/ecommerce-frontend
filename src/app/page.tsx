@@ -12,7 +12,7 @@ const getProducts = async () => {
 export default async function Home() {
   const products = await getProducts();
   return (
-    <main className="grid  min-h-screen grid-cols-4 m-4   ">
+    <main className="grid  min-h-screen grid-cols-4 m-4 gap-4   ">
       {products.map((product: Products) => (
         
           Card({ product })
