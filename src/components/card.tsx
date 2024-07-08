@@ -2,6 +2,8 @@ import { Products } from '@/interfaces/product.interface'
 import Image from 'next/image'
 import styles from '@/styles/card.module.scss'
 import ButtonCard from './ui/ButtonCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 const Card= ({ product }: { product: Products}) => {
   const { id, name, description, price, stock, imgUrl } = product
 
@@ -24,7 +26,7 @@ const Card= ({ product }: { product: Products}) => {
         <h2>${price}</h2>
         </div>
         <p>Stock:{stock}</p>
-        <ButtonCard>Add to Cart</ButtonCard>
+        <ButtonCard><FontAwesomeIcon icon={faCartPlus} className={styles.icon} />Add to Cart</ButtonCard>
       </div>
     </div>
   

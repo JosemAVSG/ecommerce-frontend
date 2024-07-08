@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "@/styles/navbar.module.scss";
+import ShopingCart from "./ui/ShopingCart";
 const Navbar: React.FC = () => {
   return (
     <>
@@ -15,7 +16,9 @@ const Navbar: React.FC = () => {
         </nav>
 
         <div className={styles.cartlogin}>
-          <Link href="/shopingCart">Cart</Link>
+          <Link href="/shopingCart">
+            <ShopingCart></ShopingCart>
+          </Link>
           <Link href="/login">Login</Link>
           <Link href="/register">Register</Link>
         
