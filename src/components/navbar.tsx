@@ -6,13 +6,12 @@ const Navbar: React.FC = () => {
     <>
       <header className={styles.navbar}>
         <div className={styles.logo}>
-            <h1>Ecommerce Logo</h1>
+            <Link href="/"><h1>Ecommerce Logo</h1></Link>
         </div>
 
         <nav className={styles.nav}>
           <Link href="/dashboard"> Dashboard</Link>
-          <Link href="/productsDeteails"> Products</Link>
-          
+          <Link href="/productDetails"> Products</Link>
         </nav>
 
         <div className={styles.cartlogin}>

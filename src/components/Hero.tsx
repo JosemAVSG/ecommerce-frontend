@@ -1,151 +1,25 @@
-import Image from "next/image";
-const Hero = () => {
-  return (
-  
-      <div id="default-carousel" className="relative w-full" data-carousel="slide">
-  {/* Carousel wrapper */}
-  <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-    {/* Item 1 */}
-    <div className="hidden duration-700 ease-in-out" data-carousel-item="">
-      <Image
-        src="https://http2.mlstatic.com/D_NQ_748413-MLA77252774716_072024-OO.webp"
-        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-        width={200}
-        height={300}
-      />
-    </div>
-    {/* Item 2 */}
-    <div className="hidden duration-700 ease-in-out" data-carousel-item="">
-      <Image
-        width={200}
-        height={300}
-        src="https://http2.mlstatic.com/D_NQ_974351-MLA77325083930_072024-OO.webp"
-        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-      />
-    </div>
-    {/* Item 3 */}
-    <div className="hidden duration-700 ease-in-out" data-carousel-item="">
-      <Image
-        src="https://http2.mlstatic.com/D_NQ_769339-MLA77469086891_072024-OO.webp"
-        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-        width={200}
-        height={300}
-      />
-    </div>
-    {/* Item 4 */}
-    <div className="hidden duration-700 ease-in-out" data-carousel-item="">
-      <Image
-        src="https://http2.mlstatic.com/D_NQ_636912-MLA77485931261_072024-OO.webp"
-        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-        width={200}
-        height={300}
-      />
-    </div>
-    {/* Item 5 */}
-    <div className="hidden duration-700 ease-in-out" data-carousel-item="">
-      <Image
-        src="https://http2.mlstatic.com/D_NQ_974351-MLA77325083930_072024-OO.webp"
-        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-        width={200}
-        height={300}
-      />
-    </div>
-  </div>
-  {/* Slider indicators */}
-  <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-    <button
-      type="button"
-      className="w-3 h-3 rounded-full"
-      aria-current="true"
-      aria-label="Slide 1"
-      data-carousel-slide-to={0}
-    />
-    <button
-      type="button"
-      className="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 2"
-      data-carousel-slide-to={1}
-    />
-    <button
-      type="button"
-      className="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 3"
-      data-carousel-slide-to={2}
-    />
-    <button
-      type="button"
-      className="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 4"
-      data-carousel-slide-to={3}
-    />
-    <button
-      type="button"
-      className="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 5"
-      data-carousel-slide-to={4}
-    />
-  </div>
-  {/* Slider controls */}
-  <button
-    type="button"
-    className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-    data-carousel-prev=""
-  >
-    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-      <svg
-        className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 6 10"
-      >
-        <path
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M5 1 1 5l4 4"
-        />
-      </svg>
-      <span className="sr-only">Previous</span>
-    </span>
-  </button>
-  <button
-    type="button"
-    className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-    data-carousel-next=""
-  >
-    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-      <svg
-        className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 6 10"
-      >
-        <path
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="m1 9 4-4-4-4"
-        />
-      </svg>
-      <span className="sr-only">Next</span>
-    </span>
-  </button>
-</div>
 
+import Image from "next/image"
+const Hero = () => {
+
+  return (
+    <div className="w-full h-screen  bg-gradient-to-r from-[#0f1f47] to-[#5f6984] flex justify-between items-center ">
+
+      <div className="text-white text-center">
+
+        <h1 className="text-4xl font-bold mb-2">Ecommerce</h1>
+
+        <p className="text-2xl mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+
+      </div>
+
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2  flex justify-center py-2 shadow-sm">
+
+        <Image className="rounded-xl" alt="hero" src="https://images.pexels.com/photos/3183158/pexels-photo-3183158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width={300} height={300} />
+      </div>
+    </div>
   )
+
 }
 
 export default Hero
