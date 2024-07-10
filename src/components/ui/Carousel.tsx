@@ -41,7 +41,7 @@ const Carousel = () => {
       <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
         {/*First item*/}
         <div
-          className="relative float-left -mr-[100%] h-[300px] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          className="relative float-left -mr-[100%] h-auto w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
           data-twe-carousel-active=""
           data-twe-carousel-item=""
           style={{ backfaceVisibility: "hidden" }}
