@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import Hero from "@/components/Hero";
+import Carousel from "@/components/ui/Carousel";
 import { Products } from '@/interfaces/product.interface'
 import styles from '@/styles/card.module.scss'
 
@@ -14,6 +15,7 @@ export default async function Home() {
   const products = await getProducts();
   return (
     <main className="min-h-screen place-content-center ">
+      <Carousel />
       <Hero />
     </main>
   );
