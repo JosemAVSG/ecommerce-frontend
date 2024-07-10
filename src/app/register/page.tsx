@@ -3,7 +3,7 @@ import RegisterForm from "@/components/RegisterForm"
 
 const page = () => {
   return (
-    <div>
+    <div className="w-full h-screen bg-gradient-to-r from-[#0f1f47] to-[#5f6984] relative">
         <RegisterForm></RegisterForm>
     </div>
   )
