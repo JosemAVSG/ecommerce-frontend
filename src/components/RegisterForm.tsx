@@ -15,11 +15,11 @@ export default function RegisterForm() {
     city: "",
   };
   return (
-    <section className="h-full absolute">
-      <div className="  px-6 py-24">
-        <div className="flex h-full flex-wrap items-center justify-center lg:justify-between">
+    <section className="h-full">
+      <div className="container-fluid h-full px-6 py-24">
+        <div className="flex flex-wrap items-center justify-center lg:justify-between">
           {/* Left column container with background*/}
-          <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12 h-screen">
+          <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12 ">
             <img
               src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
               className="w-full"
@@ -27,7 +27,7 @@ export default function RegisterForm() {
             />
           </div>
           {/* Right column container with form */}
-          <div className="md:w-8/12 lg:ms-6 lg:w-5/12  ">
+          <div className="md:w-8/12 lg:ms-6 lg:w-5/12">
             <Formik
               initialValues={initialvalue}
               onSubmit={(values) => {
@@ -35,12 +35,14 @@ export default function RegisterForm() {
               }}
               validate={(values) => validateRegister(values)}
             >
-              <Form className="bg-light-blue shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div className="flex flex-col gap-2">
+              <Form className="bg-light-blue shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+                <div className="grid grid-cols-2 gap-2">
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     Email
                   </label>
                   <Field
+                    
                     type="email"
                     name="email"
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -50,6 +52,9 @@ export default function RegisterForm() {
                     component="div"
                     className="text-red-500"
                   />
+                  </div>
+
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     Password
                   </label>
@@ -59,6 +64,10 @@ export default function RegisterForm() {
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   <ErrorMessage name="password" component="div" />
+
+                  </div>
+
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     Confirm Password
                   </label>
@@ -68,6 +77,9 @@ export default function RegisterForm() {
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   <ErrorMessage name="confirmPassword" component="div" />
+                  </div>
+
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     Name
                   </label>
@@ -77,6 +89,8 @@ export default function RegisterForm() {
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   <ErrorMessage name="name" component="div" />
+                  </div>
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     Address
                   </label>
@@ -86,6 +100,8 @@ export default function RegisterForm() {
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   <ErrorMessage name="address" component="div" />
+                  </div>
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     Phone
                   </label>
@@ -99,6 +115,9 @@ export default function RegisterForm() {
                     component="div"
                     className="text-red-500"
                   />
+                  </div>
+
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     Country
                   </label>
@@ -112,6 +131,8 @@ export default function RegisterForm() {
                     component="div"
                     className="text-red-500"
                   />
+                  </div>
+                  <div>
                   <label className="block text-white text-sm font-bold mb-2">
                     City
                   </label>
@@ -125,9 +146,10 @@ export default function RegisterForm() {
                     component="div"
                     className="text-red-500"
                   />
+                  </div>
                   <button
                     type="submit"
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold col-span-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   >
                     Register
                   </button>
