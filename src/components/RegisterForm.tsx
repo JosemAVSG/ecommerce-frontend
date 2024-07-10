@@ -6,24 +6,17 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 export default function RegisterForm() {
   const initialvalue = {
     name: "",
-
     email: "",
-
     password: "",
-
     confirmPassword: "",
-
     address: "",
-
     phone: "",
-
     country: "",
-
     city: "",
   };
   return (
-    <section className="h-screen ">
-      <div className="h-full px-6 py-24">
+    <section className="h-full absolute">
+      <div className="  px-6 py-24">
         <div className="flex h-full flex-wrap items-center justify-center lg:justify-between">
           {/* Left column container with background*/}
           <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12 h-screen">
@@ -34,7 +27,7 @@ export default function RegisterForm() {
             />
           </div>
           {/* Right column container with form */}
-          <div className="md:w-8/12 lg:ms-6 lg:w-5/12">
+          <div className="md:w-8/12 lg:ms-6 lg:w-5/12  ">
             <Formik
               initialValues={initialvalue}
               onSubmit={(values) => {
@@ -42,38 +35,104 @@ export default function RegisterForm() {
               }}
               validate={(values) => validateRegister(values)}
             >
-          
-                <Form className="bg-light-blue shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                  <div className="flex flex-col gap-3">
-
-                  <label className="block text-white text-sm font-bold mb-2">Email</label>
-                  <Field type="email" name="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  <ErrorMessage name="email" component="div" className="text-red-500" />
-                  <label className="block text-white text-sm font-bold mb-2">Password</label>
-                  <Field type="password" name="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+              <Form className="bg-light-blue shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div className="flex flex-col gap-2">
+                  <label className="block text-white text-sm font-bold mb-2">
+                    Email
+                  </label>
+                  <Field
+                    type="email"
+                    name="email"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="text-red-500"
+                  />
+                  <label className="block text-white text-sm font-bold mb-2">
+                    Password
+                  </label>
+                  <Field
+                    type="password"
+                    name="password"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
                   <ErrorMessage name="password" component="div" />
-                  <label className="block text-white text-sm font-bold mb-2">Confirm Password</label>
-                  <Field type="password" name="confirmPassword" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                  <label className="block text-white text-sm font-bold mb-2">
+                    Confirm Password
+                  </label>
+                  <Field
+                    type="password"
+                    name="confirmPassword"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
                   <ErrorMessage name="confirmPassword" component="div" />
-                  <label className="block text-white text-sm font-bold mb-2">Name</label>
-                  <Field type="text" name="name" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                  <label className="block text-white text-sm font-bold mb-2">
+                    Name
+                  </label>
+                  <Field
+                    type="text"
+                    name="name"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
                   <ErrorMessage name="name" component="div" />
-                  <label className="block text-white text-sm font-bold mb-2">Address</label>
-                  <Field type="text" name="address" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  <ErrorMessage name="address" component="div"  />
-                  <label className="block text-white text-sm font-bold mb-2">Phone</label>
-                  <Field type="text" name="phone" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  <ErrorMessage name="phone" component="div" className="text-red-500" />
-                  <label className="block text-white text-sm font-bold mb-2">Country</label>
-                  <Field type="text" name="country" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  />
-                  <ErrorMessage name="country" component="div" className="text-red-500" />
-                  <label className="block text-white text-sm font-bold mb-2">City</label>
-                  <Field type="text" name="city" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  <ErrorMessage name="city" component="div" className="text-red-500" />
-                  <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Register</button>
-                  </div>
-                </Form>
-              
+                  <label className="block text-white text-sm font-bold mb-2">
+                    Address
+                  </label>
+                  <Field
+                    type="text"
+                    name="address"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                  <ErrorMessage name="address" component="div" />
+                  <label className="block text-white text-sm font-bold mb-2">
+                    Phone
+                  </label>
+                  <Field
+                    type="text"
+                    name="phone"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                  <ErrorMessage
+                    name="phone"
+                    component="div"
+                    className="text-red-500"
+                  />
+                  <label className="block text-white text-sm font-bold mb-2">
+                    Country
+                  </label>
+                  <Field
+                    type="text"
+                    name="country"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                  <ErrorMessage
+                    name="country"
+                    component="div"
+                    className="text-red-500"
+                  />
+                  <label className="block text-white text-sm font-bold mb-2">
+                    City
+                  </label>
+                  <Field
+                    type="text"
+                    name="city"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                  <ErrorMessage
+                    name="city"
+                    component="div"
+                    className="text-red-500"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  >
+                    Register
+                  </button>
+                </div>
+              </Form>
             </Formik>
           </div>
         </div>

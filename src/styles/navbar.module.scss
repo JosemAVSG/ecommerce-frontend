@@ -1,32 +1,38 @@
-
-$color-navy: #1B1F3B;
+$color-navy: #1b1f3b;
 $color-light-blue: #15384e;
-$color-dark-gray: #3A3A3A;
-$color-white: #FFFFFF;
-$color-mint-green: #37D67A;
-$color-orange: #FF5722;
-$color-light-yellow: #FFEB3B;
+$color-dark-gray: #3a3a3a;
+$color-white: #ffffff;
+$color-mint-green: #37d67a;
+$color-orange: #ff5722;
+$color-light-yellow: #ffeb3b;
 
-.navbar{
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: $color-light-blue;
+  color: $color-white;
+  .logo {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .cartlogin {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .login{
+    display: flex;
+    gap: 1rem;
     align-items: center;
-    padding: 1rem;
-    background: $color-light-blue;
-    color: $color-white;
-    .logo{
-        h1{
-            font-size: 1.5rem;
-        }
-    }
-
-    .nav{
-        display: flex;
-        gap: 1rem;
-    }
-
-    .cartlogin{
-        display: flex;
-        gap: 1rem;
-    }
+    justify-content: center;
+  }
 }
