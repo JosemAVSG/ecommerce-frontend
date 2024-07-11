@@ -16,7 +16,8 @@ export default async function Home() {
   return (
     <main className="min-h-screen place-content-center ">
       <Carousel />
-      <Hero />
+    
+      {/* <Hero /> */}
     </main>
   );
 }

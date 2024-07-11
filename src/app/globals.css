@@ -16,7 +16,8 @@
   }
 }
 body{
-  background: linear-gradient(to  right , #0f1f47, #5f6984)  
+  /* background: linear-gradient(to  right , #0f1f47, #5f6984); */
+  
 }
 
 @layer utilities {
