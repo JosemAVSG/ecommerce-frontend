@@ -8,3 +8,13 @@
         mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     }
 }
+.carouselProducts{
+    position: relative;
+    height: 300px;
+    
+    img{
+        height: 400px;
+        object-fit: cover;
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+}

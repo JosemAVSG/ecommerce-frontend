@@ -1,7 +1,7 @@
 'use client'
 import styles from '@/styles/carousel.module.scss'
 import { useEffect } from 'react';
-const Carousel = () => {
+const CarouselProducts = () => {
 
   useEffect(() => {
     const init = async () =>{
@@ -13,8 +13,9 @@ const Carousel = () => {
 
 
   return (
+    <section className=''>
     <div
-      className={styles.carousel}
+      className={styles.carouselProducts}
       id="carouselExampleCaptions"
       data-twe-carousel-init=""
       data-twe-ride="carousel"
@@ -147,7 +148,8 @@ const Carousel = () => {
         </span>
       </button>
     </div>
+    </section>
   );
 };
 
-export default Carousel;
+export default CarouselProducts;

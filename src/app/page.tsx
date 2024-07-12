@@ -1,6 +1,7 @@
 import Card from "@/components/Card";
 import Hero from "@/components/Hero";
 import Carousel from "@/components/ui/Carousel";
+import CarouselProducts from "@/components/ui/CarouselProducts";
 import CategoriesCard from "@/components/ui/CategoriesCard";
 import { Products } from '@/interfaces/product.interface'
 import styles from '@/styles/card.module.scss'
@@ -18,6 +19,8 @@ export default async function Home() {
     <main className="min-h-screen  ">
       <Carousel />
       <CategoriesCard />
+      {/* <CarouselProducts /> */}
+      
       {/* <Hero /> */}
     </main>
   );
