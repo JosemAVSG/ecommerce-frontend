@@ -34,6 +34,7 @@ const LoginForm = () => {
               }}
             >
               <Form className="bg-light-blue shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+              <h2 className="text-2xl font-bold mb-4 text-white text-center">Login</h2>
                 <div className=" relative mb-6">
                   <Field
                     type="email"
@@ -78,7 +79,7 @@ const LoginForm = () => {
                       id="exampleCheck3"
                     />
                     <label
-                      className="inline-block ps-[0.15rem] hover:cursor-pointer"
+                      className="inline-block ps-[0.15rem] hover:cursor-pointer text-white"
                       htmlFor="exampleCheck3"
                     >
                       Remember me
@@ -87,7 +88,7 @@ const LoginForm = () => {
                   {/* Forgot password link */}
                   <a
                     href="#!"
-                    className="text-primary focus:outline-none dark:text-primary-400"
+                    className="text-white focus:outline-none dark:text-primary-400"
                   >
                     Forgot password?
                   </a>
@@ -95,7 +96,7 @@ const LoginForm = () => {
                 {/* Submit button */}
                 <button
                   type="submit"
-                  className="inline-block w-full rounded bg- px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                  className="inline-block w-full rounded bg-blue-500 px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-blue-400 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                   data-twe-ripple-init=""
                   data-twe-ripple-color="light"
                   defaultChecked={true}
