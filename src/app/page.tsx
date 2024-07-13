@@ -1,10 +1,7 @@
-import Card from "@/components/Card";
-import Hero from "@/components/Hero";
+
 import Carousel from "@/components/ui/Carousel";
-import CarouselProducts from "@/components/ui/CarouselProducts";
 import CategoriesCard from "@/components/ui/CategoriesCard";
-import { Products } from '@/interfaces/product.interface'
-import styles from '@/styles/card.module.scss'
+import Hero from "@/components/Hero";
 
 const getProducts = async () => {
   const  res = await fetch('https://nest-demo-latest-plw3.onrender.com/products');
@@ -21,7 +18,7 @@ export default async function Home() {
       <CategoriesCard />
       {/* <CarouselProducts /> */}
       
-      {/* <Hero /> */}
+      <Hero />
     </main>
   );
 }

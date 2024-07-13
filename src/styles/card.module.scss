@@ -12,39 +12,41 @@ $color-light-yellow: #FFEB3B;
     flex-direction: column;
     background: $color-light-blue;
     color: $color-white;
-    .button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        background-color: $color-mint-green;
-        color: $color-white;
-        border-radius: 15px;
-        margin: 0.2rem;
-        padding: 0.2rem;
-        transition: 0.2s ease-in-out;
-        
-        .icon{
-            width: 30px;
-            height: 30px;
-            color: $color-white;
-            transition: 0.2s ease-in-out;
-        }
-    }
 
-    .button:hover{
-        background-color: $color-light-yellow;
-        color: $color-dark-gray;
-        border-radius: 15px;
-        margin: 0.2rem;
-        padding: 0.2rem;
-        .icon{
-            color: #15384e;
-        }
-    }
     
 }
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background-color: $color-mint-green;
+    color: $color-white;
+    border-radius: 15px;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    transition: 0.2s ease-in-out;
+    
+    .icon{
+        width: 30px;
+        height: 30px;
+        color: $color-white;
+        transition: 0.2s ease-in-out;
+    }
+}
 
+.button:hover{
+    background-color: $color-light-yellow;
+    
+    color: #15384e;
+    border-radius: 15px;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    .icon{
+        color: #15384e;
+    }
+}
 .card_img{
     display: flex;
     position: relative;

@@ -2,7 +2,8 @@
 import styles from '@/styles/card.module.scss'
 const ButtonCard = ({children}: {children: React.ReactNode}) => {
 
-    const handleClick = () => {
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.stopPropagation();
         console.log('Button clicked!');
     }
 
