@@ -1,7 +1,14 @@
 "use client";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { validateLogin } from "@/helpers/validations";
-const LoginForm = () => {
+import { useState } from "react";
+interface ValuesLogin {
+  email: string;
+  password: string;
+}
+
+const LoginForm =  () => {
+  const [valid , setValid] = useState(false)
   return (
     <section className=" h-full ">
       <div className="container h-full px-6 py-24">
@@ -19,30 +26,44 @@ const LoginForm = () => {
             <Formik
               initialValues={{ email: "", password: "" }}
               onSubmit={(values) => {
-                console.log(values);
+                   fetch('https://nest-demo-latest-plw3.onrender.com/auth/signin', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(values)
+                  })
+                  .then((res) => res.json())
+                  .then((data) => {
+                      console.log(data)
+                  })
+                  .catch((err) => {
+                      console.log(err)
+                  })
               }}
               validate={(values) => {
-                const errors = {} as any;
-                if (!values.email) {
-                  errors.email = "Required";
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = "Invalid email address";
+                if(values.email == "" && values.password == ""){
+                  setValid(false)
+                }else{
+                  setValid(true)
                 }
-                return errors;
+                const errors = validateLogin(values);
+              
+                return errors
               }}
             >
               <Form className="bg-light-blue shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
               <h2 className="text-2xl font-bold mb-4 text-white text-center">Login</h2>
                 <div className=" relative mb-6">
-                  <Field
+                
+                   <Field
+                    data-status ={valid ? "true" : "false"}
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-                  />
-                  <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-white peer-data-[twe-input-state-active]:-translate-y-[1.15rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary">
+                    className={`peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-white data-[status=true]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-white dark:autofill:shadow-autofill dark:peer-focus:text-white [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0`}
+                  /> 
+                  <label data-status = {valid ? "true" : "false"} className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-white peer-data-[status=true]:-translate-y-[1.15rem] peer-data-[status=true]:scale-[0.8] motion-reduce:transition-none dark:text-white dark:peer-focus:text-white">
                     Email
                   </label>
                   <ErrorMessage
@@ -56,10 +77,12 @@ const LoginForm = () => {
                   <Field
                     type="password"
                     name="password"
-                    placeholder="Password"
-                    className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text- data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                    // placeholder="Password"
+                    data-status ={valid ? "true" : "false"}
+
+                    className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text- data-[status=true]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-white [&:not([data-status=true])]:placeholder:opacity-0"
                   />
-                  <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-white peer-data-[twe-input-state-active]:-translate-y-[1.15rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary">
+                  <label data-status = {valid ? "true" : "false"} className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-white peer-data-[status=true]:-translate-y-[1.15rem] peer-data-[status=true]:scale-[0.8] motion-reduce:transition-none dark:text-white dark:peer-focus:text-white">
                     Password
                   </label>
                   <ErrorMessage
