@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { validateLogin } from "@/helpers/validations";
 import { useState, useContext } from "react";
 import { AuthContext } from "@/context/AuthContex";
-import { cookies } from "next/headers";
+import Cookies from 'js-cookie';
 
 
 interface ValuesLogin {
@@ -31,7 +31,8 @@ const LoginForm =  () => {
       });
       const data = await response.json();
       localStorage.setItem("token", data.token);
-      dispatch({ type: "LOGIN", payload: data });
+      Cookies.set('token', data.token);
+      // dispatch({ type: "LOGIN", payload: data });
       
       if (response.ok) {
         console.log('Login successful:', data);
