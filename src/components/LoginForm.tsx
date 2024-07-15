@@ -1,7 +1,11 @@
 "use client";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { validateLogin } from "@/helpers/validations";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "@/context/AuthContex";
+import { cookies } from "next/headers";
+
+
 interface ValuesLogin {
   email: string;
   password: string;
@@ -9,6 +13,37 @@ interface ValuesLogin {
 
 const LoginForm =  () => {
   const [valid , setValid] = useState(false)
+  const {state, dispatch} = useContext<any>(AuthContext)
+  // console.log(state.user);
+  
+   const login = async (values :ValuesLogin) => {
+    
+    
+    
+    try {
+      const response = await fetch('https://nest-demo-latest-plw3.onrender.com/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          
+        },
+        body: JSON.stringify(values),
+      });
+      const data = await response.json();
+      localStorage.setItem("token", data.token);
+      dispatch({ type: "LOGIN", payload: data });
+      
+      if (response.ok) {
+        console.log('Login successful:', data);
+        return data;
+      } else {
+        console.error('Login failed:', data.message);
+      }
+    } catch (error) {
+      console.log('An error occurred during login:', error);
+    }
+  };
+
   return (
     <section className=" h-full ">
       <div className="container h-full px-6 py-24">
@@ -25,21 +60,8 @@ const LoginForm =  () => {
           <div className="md:w-8/12 lg:ms-6 lg:w-5/12 gap-4">
             <Formik
               initialValues={{ email: "", password: "" }}
-              onSubmit={(values) => {
-                   fetch('https://nest-demo-latest-plw3.onrender.com/auth/signin', {
-                      method: 'POST',
-                      headers: {
-                          'Content-Type': 'application/json'
-                      },
-                      body: JSON.stringify(values)
-                  })
-                  .then((res) => res.json())
-                  .then((data) => {
-                      console.log(data)
-                  })
-                  .catch((err) => {
-                      console.log(err)
-                  })
+              onSubmit={  (values) => {
+                 login(values)
               }}
               validate={(values) => {
                 if(values.email == "" && values.password == ""){

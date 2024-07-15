@@ -1,8 +1,10 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Contexto } from "@/context/AuthContex";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
   }
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,10 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body className={inter.className }>
+      <Contexto>
       <Navbar/>
         {children}
       <Footer/>
+      </Contexto>
       </body>
     </html>
   );
