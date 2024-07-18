@@ -14,11 +14,9 @@ interface ValuesLogin {
 const LoginForm =  () => {
   const [valid , setValid] = useState(false)
   const {state, dispatch} = useContext<any>(AuthContext)
-  // console.log(state.user);
+  
   
    const login = async (values :ValuesLogin) => {
-    
-    
     
     try {
       const response = await fetch('https://nest-demo-latest-plw3.onrender.com/auth/signin', {

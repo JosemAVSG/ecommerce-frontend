@@ -9,7 +9,10 @@ export const  Contexto = ({ children }:{ children: React.ReactNode }) => {
     const initialState = {
         user: null,
     }
-    
+    // const userdata = localStorage.getItem('userdata');
+    // if (userdata) {
+    //     initialState.user = JSON.parse(userdata);
+    // }
     const reducer = (state: any, action: any) => {
 
         switch (action.type) {
