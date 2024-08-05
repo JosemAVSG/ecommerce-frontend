@@ -60,7 +60,11 @@ const CarouselProducts = () => {
           data-twe-carousel-item=""
           style={{ backfaceVisibility: "hidden" }}
         >
-        <CategoriesCard/>
+          <img
+            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
+            className="block w-full"
+            alt="..."
+          />
         </div>
         {/*Second item*/}
         <div
@@ -91,12 +95,12 @@ const CarouselProducts = () => {
       </div>
       {/*Carousel controls - prev item*/}
       <button
-        className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        className="absolute bg-white w-[8%] h-[18%]  bottom-0 -left-8 rounded-[100%] top-52 z-[1] flex items-center justify-center p-0 text-center  text-black hover:visible"
         type="button"
         data-twe-target="#carouselProducts"
         data-twe-slide="prev"
       >
-        <span className="inline-block h-8 w-8">
+        <span className="inline-block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -118,12 +122,12 @@ const CarouselProducts = () => {
       </button>
       {/*Carousel controls - next item*/}
       <button
-        className="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        className="absolute bg-white w-[8%] h-[18%]  bottom-0 -right-10 rounded-[100%] top-52  flex items-center justify-center p-0 text-center  text-black "
         type="button"
         data-twe-target="#carouselProducts"
         data-twe-slide="next"
       >
-        <span className="inline-block  h-8 w-8">
+        <span className="inline-block ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
