@@ -12,24 +12,44 @@
     button[data-twe-slide="next"] {
         /* tus estilos aquí */
         background: white;
-        height: 30%;
+        height: 20%;
         color: black;
         border-radius: 100px  0px 0px 100px;
-        top: 100px;
+        top: 150px;
         width: 6%;
-        
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
       }
 
       button[data-twe-slide="prev"] {
         /* tus estilos aquí */
-        top: 100px;
+        top: 150px;
         width: 6%;
-        height: 30%;
+        height: 20%;
         background: white; 
         color: black;
         border-radius: 0 100px 100px 0;
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
       }
     
+      button[data-twe-slide="next"]:hover {
+        /* tus estilos aquí */
+        box-shadow: 2px 2px 5px black;
+        border: rgb(5, 5, 53) 1px solid;
+      }
+    
+      button[data-twe-slide="prev"]:hover {
+        /* tus estilos aquí */
+        box-shadow: 2px 2px 5px black;
+        border: rgb(5, 5, 53) 1px solid;
+      }
       
 }
 .carouselProducts{
