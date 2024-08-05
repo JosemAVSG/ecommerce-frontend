@@ -1,22 +1,23 @@
 'use client'
 import styles from '@/styles/carousel.module.scss'
 import { useEffect } from 'react';
+import CategoriesCard from './CategoriesCard';
 const CarouselProducts = () => {
 
-  useEffect(() => {
-    const init = async () =>{
-      const {Carousel, initTWE} = await import('tw-elements');
-      initTWE({Carousel});
-    }
-    init();
-  }, []);
+  // useEffect(() => {
+  //   const init = async () =>{
+  //     const {Carousel, initTWE} = await import('tw-elements');
+  //     initTWE({Carousel});
+  //   }
+  //   init();
+  // }, []);
 
 
   return (
-    <section className=''>
+    <section className='flex  mt-52 w-4/5  self-center'> 
     <div
-      className={styles.carouselProducts}
-      id="carouselExampleCaptions"
+      className='relative justify-center '
+      id="carouselProducts"
       data-twe-carousel-init=""
       data-twe-ride="carousel"
 
@@ -28,7 +29,7 @@ const CarouselProducts = () => {
       >
         <button
           type="button"
-          data-twe-target="#carouselExampleCaptions"
+          data-twe-target="#carouselProducts"
           data-twe-slide-to={0}
           data-twe-carousel-active=""
           className="mx-[3px] box-content h-[10px] w-[10px]  flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent rounded-[50%] bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
@@ -37,34 +38,29 @@ const CarouselProducts = () => {
         />
         <button
           type="button"
-          data-twe-target="#carouselExampleCaptions"
+          data-twe-target="#carouselProducts"
           data-twe-slide-to={1}
           className="mx-[3px] box-content h-[10px] w-[10px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent rounded-[50%] bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
           aria-label="Slide 2"
         />
         <button
           type="button"
-          data-twe-target="#carouselExampleCaptions"
+          data-twe-target="#carouselProducts"
           data-twe-slide-to={2}
           className="mx-[3px] box-content h-[10px] w-[10px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent rounded-[50%] bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
           aria-label="Slide 3"
         />
       </div>
       {/*Carousel items*/}
-      <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+      <div className="relative w-full overflow-hidden after:clear-both after:block after:content-[''] rounded-2xl">
         {/*First item*/}
         <div
-          className="relative float-left -mr-[100%] h-auto w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          className="relative float-left bg-white -mr-[100%] h-auto w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
           data-twe-carousel-active=""
           data-twe-carousel-item=""
           style={{ backfaceVisibility: "hidden" }}
         >
-          <img
-            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-            className="block w-full"
-            alt="..."
-          />
-        
+        <CategoriesCard/>
         </div>
         {/*Second item*/}
         <div
@@ -97,7 +93,7 @@ const CarouselProducts = () => {
       <button
         className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
-        data-twe-target="#carouselExampleCaptions"
+        data-twe-target="#carouselProducts"
         data-twe-slide="prev"
       >
         <span className="inline-block h-8 w-8">
@@ -124,7 +120,7 @@ const CarouselProducts = () => {
       <button
         className="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
-        data-twe-target="#carouselExampleCaptions"
+        data-twe-target="#carouselProducts"
         data-twe-slide="next"
       >
         <span className="inline-block  h-8 w-8">

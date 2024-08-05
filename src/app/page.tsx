@@ -1,6 +1,7 @@
 
 import Carousel from "@/components/ui/Carousel";
 import CategoriesCard from "@/components/ui/CategoriesCard";
+import CarouselProducts from "@/components/ui/CarouselProducts";
 import Hero from "@/components/Hero";
 
 const getProducts = async () => {
@@ -13,12 +14,15 @@ const getProducts = async () => {
 export default async function Home() {
   const products = await getProducts();
   return (
-    <main className="min-h-screen  ">
+    <main className="min-h-screen grid grid-row-3 ">
       <Carousel />
       <CategoriesCard />
-      {/* <CarouselProducts /> */}
+      <div className="relative flex justify-center mb-10">
+
+      <CarouselProducts />
+      </div>
       
-      <Hero />
+      {/* <Hero /> */}
     </main>
   );
 }

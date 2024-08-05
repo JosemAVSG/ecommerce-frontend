@@ -8,9 +8,35 @@
         mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     }
 
-    /* Seleccionando el botón por uno de sus atributos */
+    button[data-twe-slide="next"] {
+        visibility: hidden;
+      }
+
+      button[data-twe-slide="prev"] {
+        /* tus estilos aquí */
+        visibility: hidden;
+
+        
+      }
+    
+
+      button[data-twe-slide="next"]:hover {
+    
+        box-shadow: 2px 2px 5px black;
+        border: rgb(5, 5, 53) 1px solid;
+      }
+    
+      button[data-twe-slide="prev"]:hover {
+    
+        box-shadow: 2px 2px 5px black;
+        border: rgb(5, 5, 53) 1px solid;
+      }
+      
+}
+.carousel:hover{
     button[data-twe-slide="next"] {
         /* tus estilos aquí */
+        visibility: visible;
         background: white;
         height: 20%;
         color: black;
@@ -26,6 +52,7 @@
 
       button[data-twe-slide="prev"] {
         /* tus estilos aquí */
+        visibility: visible;
         top: 150px;
         width: 6%;
         height: 20%;
@@ -39,18 +66,6 @@
         }
       }
     
-      button[data-twe-slide="next"]:hover {
-        /* tus estilos aquí */
-        box-shadow: 2px 2px 5px black;
-        border: rgb(5, 5, 53) 1px solid;
-      }
-    
-      button[data-twe-slide="prev"]:hover {
-        /* tus estilos aquí */
-        box-shadow: 2px 2px 5px black;
-        border: rgb(5, 5, 53) 1px solid;
-      }
-      
 }
 .carouselProducts{
     position: relative;
