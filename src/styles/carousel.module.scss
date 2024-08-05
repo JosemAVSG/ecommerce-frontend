@@ -7,6 +7,30 @@
         object-fit: cover;
         mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     }
+
+    /* Seleccionando el botón por uno de sus atributos */
+    button[data-twe-slide="next"] {
+        /* tus estilos aquí */
+        background: white;
+        height: 30%;
+        color: black;
+        border-radius: 100px  0px 0px 100px;
+        top: 100px;
+        width: 6%;
+        
+      }
+
+      button[data-twe-slide="prev"] {
+        /* tus estilos aquí */
+        top: 100px;
+        width: 6%;
+        height: 30%;
+        background: white; 
+        color: black;
+        border-radius: 0 100px 100px 0;
+      }
+    
+      
 }
 .carouselProducts{
     position: relative;

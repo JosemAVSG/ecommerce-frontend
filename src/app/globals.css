@@ -15,10 +15,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-/* body{
-  background: linear-gradient(to  right , #0f1f47, #5f6984);
-  
-} */
+body{
+  background: hsl(0, 0%, 75%);
+
+}
 
 
 input:-webkit-autofill,

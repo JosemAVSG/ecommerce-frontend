@@ -3,7 +3,7 @@ import Image from "next/image"
 const Hero = () => {
 
   return (
-    <div className="w-full h-screen  bg-gradient-to-r from-[#0f1f47] to-[#5f6984] flex justify-between items-center ">
+    <div className="w-full h-screen  flex justify-between items-center ">
 
       <div className="text-white text-center">
 
