@@ -3,8 +3,6 @@ import { createContext, useReducer } from 'react';
 
 export const AuthContext = createContext({});
 
-
-
 export const  Contexto = ({ children }:{ children: React.ReactNode }) => {
     const initialState = {
         user: null,

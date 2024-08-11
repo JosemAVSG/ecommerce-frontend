@@ -20,6 +20,7 @@
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.77.6",
+    "socket.io-client": "^4.7.5",
     "tw-elements": "^2.0.0"
   },
   "devDependencies": {

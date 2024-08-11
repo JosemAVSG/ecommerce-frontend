@@ -2,6 +2,8 @@
 
 import { validateRegister } from "@/helpers/validations";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useSocket } from "@/context/WebSocket";
+import { useEffect } from "react";
 
 export default function RegisterForm() {
   const initialvalue = {
@@ -14,6 +16,22 @@ export default function RegisterForm() {
     country: "",
     city: "",
   };
+  const socket = useSocket();
+
+  useEffect(() => {
+    if (socket) {
+      socket.emit("message", "Hello from client");
+      socket.on("message", (data) => {
+        console.log(data);
+      });
+    }
+    return () => {
+      if (socket) {
+        socket.disconnect();
+      }
+    };
+  }, [socket]);
+
   return (
     <section className="h-full">
       <div className="container-fluid h-full px-6 py-24">

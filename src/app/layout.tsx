@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Contexto } from "@/context/AuthContex";
+import { SocketProvider } from "@/context/WebSocket";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -27,11 +28,13 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className }>
+      <SocketProvider>
       <Contexto>
       <Navbar/>
         {children}
       <Footer/>
       </Contexto>
+      </SocketProvider>
       </body>
     </html>
   );
